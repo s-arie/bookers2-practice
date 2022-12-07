@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   # ユーザーがログインしているか確認し、ログインしていない場合はログインページに遷移する
   before_action :authenticate_user!
   # 編集・更新・削除アクション実行前にユーザーが投稿者であるか確認し、投稿者のみアクションを実行できるようにする
-  before_action :ensure_current_user, only[:edit, :update, :destroy]
+  before_action :ensure_current_user, only: [:edit, :update, :destroy]
 
   #新規投稿アクション
   def create

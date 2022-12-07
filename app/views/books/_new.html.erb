@@ -1,0 +1,13 @@
+<div class=formgroup>
+  <!--投稿フォーム-->
+  <% form_with model: Book.new do |f| %>
+    <!--タイトル-->
+    <%= f.label :title %>
+    <%= f.text_feild :title %>
+    <!--本文-->
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+    <!--投稿ボタン-->
+    <%= f.submit %>
+  <% end %>
+</div>
